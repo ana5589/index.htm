@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>عن وصال</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --p-green:#FCFFFC; /* أخضر فاتح جداً جداً للبوكسات */
+  --border-brown:#D1B89F; /* مموه بني للبداية */
+  --p-lightgreen:#BEE7B0; /* أخضر فاتح للأزرار والروابط عند hover */
+  --text:#5C4438; /* بني دافئ للنص */
+  --radius:18px;
+}
+
+/* الخط */
+body{
+  font-family:'Tajawal',sans-serif;
+  margin:0;
+  background:#ffffff;
+  color:var(--text);
+  line-height:1.8;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* دوائر زينة طفولية */
+.circle{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  position:absolute;
+  z-index:-1;
+  opacity:0.3;
+}
+.c1{top:30px; right:20px; background:#BEE7B0;} /* أخضر فاتح */
+.c2{bottom:60px; left:50px; background:#FFEAF1;} /* وردي فاتح */
+.c3{top:200px; left:-40px; background:#FCF8E8;} /* أصفر فاتح جداً */
+.c4{bottom:150px; right:-30px; background:#FFDDE1;} /* وردي فاتح جداً */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse; /* اللوقو على اليمين */
+  padding: 18px 30px;
+  background: #ffffff;
+  border-bottom: 4px solid var(--p-lightgreen);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+header .uyu {
+  max-width: 90px;
+  margin-left: 20px; /* مسافة بين اللوقو وباقي العناصر */
+}
+
+header .title-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* العنوان والروابط على اليسار */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+header nav {
+  margin-top: 8px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+header nav a:hover {
+  background: var(--p-lightgreen);
+  color: var(--text);
+}
+
+/* الروابط */
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:8px 14px;
+  font-size:1rem;
+  border-radius:var(--radius);
+  transition:0.3s;
+}
+nav a:hover{
+  background:var(--p-lightgreen);
+  color:var(--text);
+}
+
+/* الأقسام */
+main{
+  max-width:850px;
+  margin:0 auto;
+  padding:24px 18px;
+}
+
+h2{
+  color:var(--text);
+  font-size:1.5rem;
+  margin-bottom:12px;
+}
+
+p{
+  color:var(--text);
+  margin-bottom:12px;
+}
+
+/* البوكسات */
+.box{
+  background:var(--p-green);
+  padding:16px 20px;
+  margin:20px 0;
+  border-radius:var(--radius);
+  border-right:5px solid var(--border-brown);
+  transition:0.3s;
+  position:relative;
+}
+
+.box::before{
+  content:'✨';
+  position:absolute;
+  top:8px;
+  left:10px;
+  font-size:18px;
+  opacity:0.5;
+}
+
+.box:hover{
+  border-right-color:var(--p-lightgreen);
+  transform: translateX(3px);
+}
+
+/* الفوتر */
+footer{
+  background:#ffffff;
+  text-align:center;
+  padding:16px;
+  margin-top:30px;
+  border-top:4px solid var(--p-lightgreen);
+  color:var(--text);
+}
+</style>
+</head>
+
+<body>
+
+<!-- دوائر الزينة -->
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+<div class="circle c4"></div>
+
+<header>
+  <img src="uyu.png" alt="وصال" class="uyu">
+  <div class="title-nav">
+    <h1>عن وصال</h1>
+    <nav>
+      <a href="home.html">الرئيسية</a>
+      <a href="story.html">عن وصال</a>
+      <a href="values.html">قيم وصال</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="map.html">الموقع</a>
+      <a href="support.html">تواصل معنا</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <h2>ما هو وصال؟</h2>
+  <p>
+    وصال هو مركز تفاعلي يربط الأطفال بكبار السن عبر أنشطة تجمع بين المرح والتعليم
+    وتسمح بتبادل الخبرات الحياتية والحفاظ على القيم الأصيلة. يهدف المركز
+    إلى خلق مساحة ترفع من جودة الحياة وتعزّز التلاحم الاجتماعي.
+  </p>
+
+  <div class="box">
+    <strong>فكرة المشروع:</strong><br>
+    جمع الأجيال في مساحات مشتركة داخل بيئة تصميمية آمنة ومريحة
+    تعتمد على مبادئ مونتيسوري والطابع الإنساني التفاعلي.
+  </div>
+
+  <p>
+    يقوم وصال على تحقيق توازن بين متطلبات الأطفال الحسية والتعليمية،
+    واحتياجات كبار السن للاندماج والمشاركة،
+    من خلال برامج فنية وثقافية وحرفية مشتركة.
+  </p>
+
+  <div class="box">
+    <strong>لماذا وصال؟</strong><br>
+    لأن الحكمة تحتاج أذنًا صغيرة تُصغي لها،  
+    والطفولة تحتاج قلبًا دافئًا يحتضنها.  
+  </div>
+
+</main>
+
+<footer>
+  جميع الحقوق محفوظة &copy; 2025 وصال 
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

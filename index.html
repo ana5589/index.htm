@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>وصال – مساحة لقاء الأجيال</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --p-green:#FCFFFC; /* أخضر فاتح جداً */
+  --border-brown:#D1B89F; /* مموه بني للبداية */
+  --p-lightgreen:#BEE7B0; /* أخضر فاتح عند hover */
+  --text:#5C4438; /* بني دافئ */
+  --radius:18px;
+}
+
+/* الخط */
+body{
+  font-family:'Tajawal',sans-serif;
+  margin:0;
+  background:#ffffff;
+  color:var(--text);
+  line-height:1.8;
+}
+
+/* صورة المشروع في الأعلى */
+.top-image{
+  width:50%;
+  max-height:230px;
+  object-fit:cover;
+  display:block;
+  border-bottom:4px solid var(--p-lightgreen);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse; /* اللوقو يصير على اليمين */
+  padding: 18px 30px;
+  background: #ffffff;
+  border-bottom: 4px solid var(--p-lightgreen);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+header .uyu {
+  max-width: 90px;
+  margin-left: 20px; /* مسافة بين اللوقو وباقي العناصر */
+}
+
+header .title-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* يوازي اللوقو */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+header nav {
+  margin-top: 8px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+header nav a:hover {
+  background: var(--p-lightgreen);
+  color: var(--text);
+}
+/* روابط الهيدر */
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:8px 14px;
+  font-size:1rem;
+  border-radius:var(--radius);
+  transition:0.3s;
+}
+nav a:hover{
+  background:var(--p-lightgreen);
+  color:var(--text);
+}
+
+/* الهيرو */
+.hero{
+  padding:50px 18px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--radius);
+  color:#3E2C20;
+}
+
+.hero h2{
+  font-size:2rem;
+  margin-bottom:15px;
+  background: rgba(255,255,255,0.7);
+  display: inline-block;
+  padding:6px 12px;
+  border-radius:12px;
+}
+
+.hero p{
+  max-width:550px;
+  margin:0 auto 20px;
+  background: rgba(255,255,255,0.6);
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:12px;
+}
+
+/* زر اكتشف الأنشطة */
+.btn{
+  background:var(--text);
+  color:#fff;
+  padding:12px 22px;
+  border-radius:var(--radius);
+  text-decoration:none;
+  transition:0.3s;
+}
+.btn:hover{
+  background:var(--p-lightgreen);
+  color:var(--text);
+}
+
+/* دوائر زينة طفولية */
+.circle{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  position:absolute;
+  z-index:-1;
+  opacity:0.45;
+}
+.c1{top:-30px;right:-20px;background:var(--p-lightgreen);}
+.c2{bottom:-40px;left:-30px;background:#FFEAF1;}
+
+/* الأقسام */
+main h2{
+  color:var(--text);
+  font-size:1.6rem;
+  margin-bottom:12px;
+}
+
+main section{
+  background:var(--p-green);
+  padding:18px;
+  margin-bottom:20px;
+  border-radius:var(--radius);
+  border-right:5px solid var(--border-brown);
+  transition:0.3s;
+}
+main section:hover{
+  border-right-color:#A3D9A5;
+  transform: translateX(3px);
+}
+
+main p{
+  color:var(--text);
+  margin-bottom:12px;
+}
+
+/* الفوتر */
+footer{
+  background:#ffffff;
+  text-align:center;
+  padding:16px;
+  margin-top:30px;
+  border-top:4px solid var(--p-lightgreen);
+  color:var(--text);
+}
+</style>
+</head>
+
+<body>
+
+<!-- صورة المشروع في الأعلى -->
+<img src="waw.jpg" alt="مشروع وصال" class="top-image">
+
+<header>
+  <img src="uyu.png" alt="وصال" class="uyu">
+  <div class="title-nav">
+    <nav>
+      <a href="home.html">الرئيسية</a>
+      <a href="story.html">عن وصال</a>
+      <a href="values.html">قيم وصال</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="map.html">الموقع</a>
+      <a href="support.html">تواصل معنا</a>
+    </nav>
+  </div>
+</header>
+
+
+<main style="padding:20px;">
+  <section>
+    <h2>عن وصال</h2>
+    <p>وصال منصة تهدف إلى ربط الأجيال عبر أنشطة تعليمية، ثقافية، واجتماعية، لتبادل الخبرات وبناء مجتمع متكامل.</p>
+  </section>
+
+  <section>
+    <h2>قيمنا</h2>
+    <p>نؤمن بالاحترام، التعاون، التعلم المستمر، وتعزيز العلاقات بين الأجيال من خلال برامجنا المتنوعة.</p>
+  </section>
+
+  <section>
+    <h2>أنشطتنا</h2>
+    <p>نوفر ورش عمل، لقاءات حوارية، فعاليات تعليمية وترفيهية، تهدف جميعها إلى تعزيز التواصل والمعرفة بين الأجيال.</p>
+    <a href="wasal-activities.html" class="btn">عرض الأنشطة</a>
+  </section>
+</main>
+
+<footer>
+  جميع الحقوق محفوظة &copy; 2025 وصال 
+</footer>
+
+</body>
+</html>

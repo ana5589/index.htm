@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الموقع – وصال</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --p-green:#FCFFFC; 
+  --border-brown:#D1B89F; 
+  --p-lightgreen:#BEE7B0; 
+  --text:#5C4438; 
+  --radius:18px;
+}
+
+/* الخط العام */
+body{
+  font-family:'Tajawal',sans-serif;
+  margin:0;
+  background:#ffffff;
+  color:var(--text);
+  line-height:1.8;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* دوائر زخرفية شفافة */
+.circle{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  position:absolute;
+  z-index:-1;
+  opacity:0.15;
+}
+.c1{top:30px; right:20px; background:#BEE7B0;}
+.c2{bottom:50px; left:30px; background:#FFEAF1;}
+.c3{top:200px; left:60px; background:#FCF8E8;}
+.c4{bottom:180px; right:100px; background:#BFD8FF;}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse; /* اللوقو على اليمين */
+  padding: 18px 30px;
+  background: #ffffff;
+  border-bottom: 4px solid var(--p-lightgreen);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+header .uyu {
+  max-width: 90px;
+  margin-left: 20px; /* مسافة بين اللوقو وباقي العناصر */
+}
+
+header .title-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* العنوان والروابط على اليسار */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+header nav {
+  margin-top: 8px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+header nav a:hover {
+  background: var(--p-lightgreen);
+  color: var(--text);
+}
+
+/* روابط الهيدر */
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:8px 14px;
+  font-size:1rem;
+  border-radius:var(--radius);
+  transition:0.3s;
+}
+nav a:hover{
+  background:var(--p-lightgreen);
+  color:var(--text);
+}
+
+/* القسم الرئيسي */
+main{
+  max-width:900px;
+  margin:0 auto;
+  padding:20px;
+  position:relative;
+}
+
+/* العناوين */
+h2{
+  color:var(--text);
+  font-size:1.6rem;
+  margin-bottom:12px;
+  border-right:5px solid var(--border-brown);
+  padding-right:10px;
+  position:relative;
+}
+
+/* أيقونة صغيرة بجانب العنوان */
+h2::before{
+  content:"📍";
+  margin-left:8px;
+  font-size:1.4rem;
+}
+
+/* فقرة */
+p{
+  color:var(--text);
+  margin-bottom:12px;
+}
+
+/* صندوق الخريطة */
+.map-box{
+  background:#FCFFFC; 
+  border-radius:var(--radius);
+  height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:1rem;
+  font-weight:600;
+  color:var(--text);
+  border:3px dashed var(--border-brown);
+  margin:20px 0;
+  transition:0.3s;
+}
+.map-box:hover{
+  transform:scale(1.02);
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* صندوق المعلومات */
+.info-box{
+  background:var(--p-green);
+  padding:18px;
+  border-radius:var(--radius);
+  border-right:5px solid var(--border-brown);
+  margin-top:20px;
+  transition:0.3s;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+.info-box:hover{
+  border-right-color:var(--p-lightgreen);
+  transform: translateX(3px);
+}
+
+/* الفوتر */
+footer{
+  background:#ffffff;
+  text-align:center;
+  padding:16px;
+  margin-top:30px;
+  border-top:4px solid var(--p-lightgreen);
+  color:var(--text);
+  position:relative;
+  z-index:1;
+}
+</style>
+</head>
+
+<body>
+
+<!-- دوائر زخرفية -->
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+<div class="circle c4"></div>
+
+<header>
+  <img src="uyu.png" alt="وصال" class="uyu">
+  <div class="title-nav">
+    <h1>موقع وصال</h1>
+    <nav>
+      <a href="home.html">الرئيسية</a>
+      <a href="story.html">عن وصال</a>
+      <a href="values.html">قيم وصال</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="map.html">الموقع</a>
+      <a href="support.html">تواصل معنا</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <h2>أين يقع وصال؟</h2>
+  <p>
+يقع وصال في موقع متميز بمنطقة جازان بجوار مرافق متنوعة، ليشكل بيئة نابضة بالحياة تجمع الأطفال وكبار السن في أنشطة تفاعلية تعزز الترابط الاجتماعي وترفع جودة الحياة.
+  </p>
+
+  <div class="map-box">
+    مكان الخريطة — يمكن إضافة خريطة Google هنا لاحقًا
+  </div>
+
+ <div class="info-box">
+  📍 <strong>العنوان:</strong><br>
+  جازان — المملكة العربية السعودية
+</div>
+
+</main>
+
+<footer>
+  جميع الحقوق محفوظة &copy; 2025 وصال 
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
