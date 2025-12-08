@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>احجز مكانك – وصال</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --p-green:#FCFFFC;
+  --border-brown:#D1B89F;
+  --p-lightgreen:#BEE7B0;
+  --text:#5C4438;
+  --radius:18px;
+}
+
+/* الخط */
+body{
+  font-family:'Tajawal',sans-serif;
+  margin:0;
+  background:#ffffff;
+  color:var(--text);
+  line-height:1.8;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* دوائر الزينة */
+.circle{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  position:absolute;
+  z-index:-1;
+  opacity:0.3;
+}
+.c1{top:30px; right:20px; background:#BEE7B0;}
+.c2{bottom:60px; left:50px; background:#FFEAF1;}
+.c3{top:200px; left:-40px; background:#FCF8E8;}
+.c4{bottom:150px; right:-30px; background:#FFDDE1;}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 18px 30px;
+  background: #ffffff;
+  border-bottom: 4px solid var(--p-lightgreen);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+header .uyu { max-width: 90px; margin-left: 20px; }
+header .title-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header h1 { margin:0; font-size:1.6rem; font-weight:700; }
+header nav { margin-top:8px; }
+header nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:8px 14px;
+  font-size:1rem;
+  border-radius:var(--radius);
+  transition:0.3s;
+}
+header nav a:hover{ background:var(--p-lightgreen); color:var(--text); }
+
+/* الأقسام */
+main{
+  max-width:1200px;  /* زودنا الحجم عشان البوكس يكبر */
+  margin:0 auto;
+  padding:24px 18px;
+}
+h2{ color:var(--text); font-size:1.5rem; margin-bottom:12px; }
+p{ color:var(--text); margin-bottom:12px; }
+
+/* البوكسات */
+.box{
+  background:var(--p-green);
+  padding:16px 20px;
+  margin:20px 0;
+  border-radius:var(--radius);
+  border-right:5px solid var(--border-brown);
+  transition:0.3s;
+  position:relative;
+}
+.box::before{
+  content:'✨';
+  position:absolute;
+  top:8px;
+  left:10px;
+  font-size:18px;
+  opacity:0.5;
+}
+.box:hover{
+  border-right-color:var(--p-lightgreen);
+  transform: translateX(3px);
+}
+
+/* بوكس الحجز مع الخلفية */
+.booking-section {
+  background: url('fgf.jpg') no-repeat center/cover;
+  padding:50px 40px;   /* كبّر البوكس داخل */
+  border-radius:var(--radius);
+  border-right:5px solid var(--border-brown);
+  margin:60px auto;    /* مساحة أكبر فوق وتحت */
+  position:relative;
+  color:#333;
+  max-width: 900px;   /* عرض أكبر للبوكس */
+  min-height:400px;    /* طول البوكس أكبر ليظهر الخلفية */
+}
+
+/* طبقة شفافة فوق الصورة لضمان وضوح النص */
+.booking-section::before {
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(255,255,255,0.5);
+  border-radius:var(--radius);
+  z-index:0;
+}
+
+.booking-section * {
+  position: relative;
+  z-index:1;
+}
+/* نموذج الحجز */
+.booking-section form input,
+.booking-section form select,
+.booking-section form textarea,
+.booking-section form button{
+  width:50%;          /* نصف عرض البوكس تقريبًا */
+  min-width:250px;    /* عشان ما تصغر جدًا على شاشات صغيرة */
+  display:block;      /* تجعل كل خانة تحت بعض */
+  margin:12px auto;   /* مسافة فوق وتحت + توسيط */
+  padding:10px;       /* ارتفاع أكبر شوي */
+  border:1px solid #ccc;
+  border-radius:var(--radius);
+  font-size:16px;
+  box-sizing:border-box;
+}
+
+.booking-section form textarea{
+  height:80px;        /* أطول شوي لمربع الملاحظات */
+}
+
+.booking-section form button{
+  width:50%;
+  min-width:150px;
+  padding:12px;
+  margin-top:20px;
+  background:var(--p-lightgreen);
+  color:var(--text);
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+.booking-section form button:hover{
+  background:#D4A373;
+}
+/* الفوتر */
+footer{
+  background:#ffffff;
+  text-align:center;
+  padding:16px;
+  margin-top:30px;
+  border-top:4px solid var(--p-lightgreen);
+  color:var(--text);
+}
+</style>
+</head>
+
+<body>
+
+<!-- دوائر الزينة -->
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+<div class="circle c4"></div>
+
+<header>
+  <img src="uyu.png" alt="وصال" class="uyu">
+  <div class="title-nav">
+    <h1>احجز مكانك</h1>
+   <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="story.html">عن وصال</a>
+      <a href="values.html">قيم وصال</a>
+      <a href="activities.html">الأنشطة</a>
+      <a href="booking.html">الحجز</a>
+      <a href="map.html">الموقع</a>
+      <a href="support.html">تواصل معنا</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="booking-section">
+    <h2>احجز مقعدك الآن</h2>
+    <form>
+      <input type="text" name="name" placeholder="الاسم الكامل" required>
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+      <input type="tel" name="phone" placeholder="رقم الجوال" required>
+      <select name="event" required>
+        <option value="event1">عمل صَنْعَة – الفخار والحرف اليدوية</option>
+        <option value="event2">مرحى – عرض بهلواني </option>
+        <option value="event3">مكتبة طالع – للأطفال  </option>
+        <option value="event4">الزراعة– محاكاة خارجية </option>
+        <option value="event5">  ظلال– شاشات عرض الحيوانات </option>
+        <option value="event6"> شغف– فراغ المهن </option>
+        <option value="event7"> نغمه – الموسيقى  </option>
+        <option value="event8"> لمسة – التفاعلات الحسية </option>
+        <option value="event9">  رذاذ– اللعب بالماء  </option>
+        <option value="event10"> بكسل – الواقع الافتراضي  </option>
+        <option value="event11"> رسم ريشة – للأطفال </option>
+      </select>
+      
+      <button type="submit">احجز الآن</button>
+    </form>
+  </section>
+
+<footer>
+  جميع الحقوق محفوظة &copy; 2025 وصال 
+</footer>
+
+</body>
+</html>

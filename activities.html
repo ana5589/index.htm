@@ -9,10 +9,10 @@
 
 <style>
 :root{
-  --p-green:#FCFFFC; 
-  --border-brown:#D1B89F; 
-  --p-lightgreen:#BEE7B0; 
-  --text:#5C4438; 
+  --p-green:#FCFFFC;
+  --border-brown:#D1B89F;
+  --p-lightgreen:#BEE7B0;
+  --text:#5C4438;
   --radius:14px;
   --p-pink:#FFEAF1;
   --p-yellow:#FCF8E8;
@@ -30,128 +30,59 @@ body{
   overflow-x:hidden;
 }
 
-/* دوائر الزينة */
-.circle{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  position:absolute;
-  z-index:-1;
-  opacity:0.25;
-}
-.c1{top:-30px; right:-20px; background:var(--p-lightgreen);}
-.c2{bottom:-40px; left:-30px; background:var(--p-pink);}
-.c3{top:220px; left:-40px; background:var(--p-yellow);}
-.c4{bottom:160px; right:-30px; background:var(--p-pink);}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row-reverse; /* اللوقو على اليمين */
-  padding: 18px 30px;
-  background: #ffffff;
-  border-bottom: 4px solid var(--p-lightgreen);
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-header .uyu {
-  max-width: 90px;
-  margin-left: 20px; /* مسافة بين اللوقو وباقي العناصر */
-}
-
-header .title-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* العنوان والروابط على اليسار */
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-header nav {
-  margin-top: 8px;
-}
-
-header nav a {
-  text-decoration: none;
-  color: var(--text);
-  padding: 6px 12px;
-  border-radius: var(--radius);
-  transition: 0.3s;
-}
-header nav a:hover {
-  background: var(--p-lightgreen);
-  color: var(--text);
-}
-
-/* عنوان القسم */
-section h2{
-  text-align:center;
-  margin-bottom:18px;
+/* بطاقة التاريخ */
+.date-box{
+  background:#fff;
+  border:2px solid var(--p-lightgreen);
+  border-radius:var(--radius);
+  display:inline-block;
+  margin:10px 0;
+  padding:6px 12px;
+  font-size:14px;
+  font-weight:600;
   color:var(--text);
-  font-size:20px;
 }
 
-/* شبكة البطاقات */
+/* البوكسات */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:16px;
 }
 
-/* بطاقة النشاط */
 .activity{
   background:var(--p-green);
   padding:12px;
   border-radius:var(--radius);
   border-right:4px solid var(--border-brown);
-  transition:0.3s;
   position:relative;
+  transition:0.3s;
 }
 
-/* رمز ✨ لكل بطاقة */
+/* رمز بسيط */
 .activity::before{
   content:'✨';
   position:absolute;
   top:8px;
   left:10px;
-  font-size:16px;
-  opacity:0.5;
+  opacity:0.4;
 }
 
 .activity:hover{
-  border-right-color:var(--p-lightgreen);
   transform: translateY(-2px);
-}
-
-/* عناوين الأنشطة */
-.activity h3{
-  font-size:18px;
-  margin-bottom:6px;
-  color:var(--text);
-}
-
-.activity p{
-  font-size:14px;
-  line-height:1.5;
-  color:var(--text);
+  border-right-color:var(--p-lightgreen);
 }
 
 /* الزر */
 .btn{
   display:inline-block;
   background:var(--text);
-  padding:8px 16px;
-  border-radius:var(--radius);
-  text-decoration:none;
   color:#fff;
+  padding:8px 18px;
+  border-radius:var(--radius);
+  font-size:14px;
   font-weight:bold;
-  margin-top:8px;
+  text-decoration:none;
   transition:0.3s;
 }
 .btn:hover{
@@ -159,36 +90,55 @@ section h2{
   color:var(--text);
 }
 
-/* الفوتر */
+/* الهيدر */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 18px 30px;
+  border-bottom: 4px solid var(--p-lightgreen);
+  background:#fff;
+  border-radius:12px;
+}
+header .uyu{ max-width:90px; margin-left:20px; }
+header h1{margin:0; font-size:1.6rem; font-weight:700;}
+
+header nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:6px 12px;
+  border-radius:var(--radius);
+}
+header nav a:hover{ background:var(--p-lightgreen); }
+
+/* عنوان القسم */
+section h2{
+  text-align:center;
+  margin-bottom:18px;
+  font-size:20px;
+}
 .footer{
   text-align:center;
   font-size:13px;
   margin-top:20px;
-  color:var(--text);
-  border-top:3px solid var(--p-lightgreen);
   padding-top:14px;
-  background:#ffffff;
+  border-top:3px solid var(--p-lightgreen);
 }
 </style>
 </head>
 
 <body>
-
-<!-- دوائر الزينة -->
-<div class="circle c1"></div>
-<div class="circle c2"></div>
-<div class="circle c3"></div>
-<div class="circle c4"></div>
-
 <header>
   <img src="uyu.png" alt="وصال" class="uyu">
-  <div class="title-nav">
+  <div>
     <h1>أنشطة وفعاليات المركز</h1>
-    <nav>
-      <a href="home.html">الرئيسية</a>
+     <nav>
+      <a href="index.html">الرئيسية</a>
       <a href="story.html">عن وصال</a>
       <a href="values.html">قيم وصال</a>
       <a href="activities.html">الأنشطة</a>
+      <a href="booking.html">الحجز</a>
       <a href="map.html">الموقع</a>
       <a href="support.html">تواصل معنا</a>
     </nav>
@@ -199,64 +149,110 @@ section h2{
     <h2>وصال ... حيث تلتقي براءه الطفولة بدفء الحكمة</h2>
 
     <div class="grid">
+
+        <!-- 1 -->
         <div class="activity">
             <h3>معمل صَنْعَة – الفخار والحرف اليدوية</h3>
             <p>فضاء ينبض بالإبداع، حيث تتحول اليدان إلى صانعتين للقصص والفنون. هنا يلمس الجميع الطين ويشكلونه، ليولد كل قطعة حكاية فريدة.</p>
+
+            <div class="date-box">🗓 25 يناير 2025 – 6 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 2 -->
         <div class="activity">
             <h3>مكتبة طالع – للأطفال</h3>
             <p>زاوية ساحرة للأطفال، حيث تنفتح أبواب القصص والخيال، ويغوص الصغار في عالم المعرفة بروح مندهشة ومبهجة.</p>
+
+            <div class="date-box">🗓 27 يناير 2025 – 5 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
-
-<div class="activity">
+        <!-- 3 -->
+        <div class="activity">
             <h3>الزراعة – محاكاة خارجية</h3>
             <p>واحة تعليمية خضراء، تزرع في القلوب حب الطبيعة، وتُمتع الصغار والكبار بجمال الحياة.</p>
+
+            <div class="date-box">🗓 28 يناير 2025 – 4 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 4 -->
         <div class="activity">
             <h3>مرحى – عرض بهلواني</h3>
             <p>لحظات مرحة تجمع الجميع، تضيف حركة وضحك وتخلق جو ترفيهي ممتع بين الأجيال.</p>
+
+            <div class="date-box">🗓 30 يناير 2025 – 7 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 5 -->
         <div class="activity">
             <h3>ظلال – شاشات عرض الحيوانات</h3>
             <p>لحظات تعليمية ممتعة تتيح للأجيال التعرف على الحيوان والطبيعة بأسلوب بسيط وجذاب.</p>
+
+            <div class="date-box">🗓 1 فبراير 2025 – 5 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 6 -->
         <div class="activity">
             <h3>شغف – فراغ المهن</h3>
             <p>مساحة تسمح بتجربة الأدوار المهنية المختلفة بطريقة ممتعة وتفاعلية.</p>
+
+            <div class="date-box">🗓 3 فبراير 2025 – 6 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 7 -->
         <div class="activity">
             <h3>نغمة – الموسيقى</h3>
             <p>مكان يشارك فيه الجميع صناعة النغمات، ويصنع لحظات موسيقية دافئة تعزز التواصل بين الأجيال.</p>
+
+            <div class="date-box">🗓 4 فبراير 2025 – 7 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 8 -->
         <div class="activity">
             <h3>لمسة – التفاعلات الحسية</h3>
             <p>فراغ يقدم تجارب لمس وضوء وحركة تناسب كل الأعمار وتُحفّز الإدراك الحسي.</p>
+
+            <div class="date-box">🗓 6 فبراير 2025 – 5 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 9 -->
         <div class="activity">
             <h3>رذاذ – اللعب بالماء</h3>
             <p>منطقة مائية منعشة تشجع اللعب الخفيف وتمنح لحظات فرح بسيطة.</p>
+
+            <div class="date-box">🗓 8 فبراير 2025 – 4 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 10 -->
         <div class="activity">
             <h3>بكسل – الواقع الافتراضي</h3>
             <p>تجربة تنقل الجميع لعوالم جديدة وتعزز الخيال والاستكشاف.</p>
+
+            <div class="date-box">🗓 10 فبراير 2025 – 7 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
 
+        <!-- 11 -->
         <div class="activity">
             <h3>مرسم ريشة – للأطفال</h3>
             <p>ركن يعبق بالألوان والخيال، حيث يترك الأطفال أحلامهم تتراقص على الورق.</p>
+
+            <div class="date-box">🗓 12 فبراير 2025 – 5 مساءً</div>
+            <a class="btn" href="booking.html">احجز مقعدك</a>
         </div>
+
     </div>
 </section>
 
-<p class="footer">   جميع الحقوق محفوظة &copy; 2025 وصال </p>
+<p class="footer">جميع الحقوق محفوظة © 2025 وصال</p>
+
 </body>
 </html>
